@@ -14,6 +14,11 @@
       border-radius: 3px;
       border: none;
       color: #535353;
+      transition: 0.3s;
+      &:hover {
+        box-shadow: 2px 2px 2px gray;
+        transform: scale(1.05);
+      }
     }
     display: flex;
     input {
@@ -34,6 +39,12 @@
         saturate(5536%) hue-rotate(350deg) brightness(91%) contrast(93%);
       width: 20px;
       cursor: pointer;
+      transition: 0.2s;
+      &:hover {
+        top: 6px;
+        left: 192px;
+        width: 25px;
+      }
     }
   }
 }

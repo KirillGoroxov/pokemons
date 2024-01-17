@@ -12,6 +12,7 @@ function App() {
     data && setSlicePokemon(data.results.slice(0, 10));
   }, [data]);
   const [valueSearch, setValueSearch] = useState('');
+  const [arr, setArr] = useState([1, 2, 3, 4, 5]);
   const [valueCount, setValueCount] = useState('');
   const [slicePokemon, setSlicePokemon] = useState();
   const [countPages, setCountPages] = useState(100);
@@ -19,6 +20,8 @@ function App() {
   return (
     <Context.Provider
       value={{
+        arr,
+        setArr,
         data,
         valueSearch,
         setValueSearch,

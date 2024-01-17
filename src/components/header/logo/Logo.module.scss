@@ -15,6 +15,10 @@
       left: 38px;
       top: 14px;
       width: 36px;
+      transition: 1s;
+      &:hover {
+        transform: rotate(360deg);
+      }
     }
   }
 }

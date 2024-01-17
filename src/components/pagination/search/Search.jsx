@@ -10,6 +10,7 @@ const Search = () => {
     data,
     setPage,
     setValueCount,
+    setArr,
   } = useContext(Context);
   const blur = (e) => {
     e.target.value.trim() === '' && skip();
@@ -21,11 +22,12 @@ const Search = () => {
   const clickEnter = () => {
     if (valueSearch === '' || valueSearch == '0') return;
     const filter = data.results.filter((poc) => {
-      return poc.name.toLowerCase().includes(valueSearch.toLowerCase());
+      return poc.name.toLowerCase().includes(valueSearch.toLowerCase().trim());
     });
     setValueCount('');
     setPage(0);
     setSlicePokemon(filter);
+    setArr([1, 2, 3, 4, 5]);
   };
   const pressEnter = (e) => {
     e.key === 'Enter' && clickEnter();

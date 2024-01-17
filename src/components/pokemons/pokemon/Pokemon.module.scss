@@ -4,6 +4,7 @@
   height: 300px;
   background-color: #f27d7d45;
   font-size: 18px;
+  transition: 0.2s;
   b {
     display: inline-block;
     width: 70px;
@@ -21,6 +22,10 @@
       display: flex;
       margin: 5px 0;
     }
+  }
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 3px 3px 3px gray;
   }
   .types {
     display: flex;

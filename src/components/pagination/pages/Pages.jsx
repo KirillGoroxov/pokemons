@@ -3,6 +3,8 @@ import styles from './Pages.module.scss';
 import { Context } from '../../../services/Context';
 const Pages = () => {
   const {
+    arr,
+    setArr,
     setSlicePokemon,
     data,
     valueCount,
@@ -12,7 +14,6 @@ const Pages = () => {
     setValueCount,
     setValueSearch,
   } = useContext(Context);
-  const [arr, setArr] = useState([1, 2, 3, 4, 5]);
   const [basePages, setBasePages] = useState();
   const [lastPage, setLastPage] = useState(false);
   const [firstPage, setFirstPage] = useState(false);
@@ -90,13 +91,13 @@ const Pages = () => {
           );
         })}
       </div>
-      <div
-        className={styles.arrow}
-        style={{ transform: 'rotate(180deg)' }}
-        id="div-next"
-        onClick={(e) => next(e)}
-      >
-        <img src="/icons/arrow.svg" alt="next" id="img-next" />
+      <div className={styles.arrow} id="div-next" onClick={(e) => next(e)}>
+        <img
+          src="/icons/arrow.svg"
+          alt="next"
+          id="img-next"
+          className={styles.next}
+        />
       </div>
     </div>
   );

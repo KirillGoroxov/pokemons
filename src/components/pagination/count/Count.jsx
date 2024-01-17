@@ -12,6 +12,7 @@ const Count = () => {
     data,
     setCountPages,
     setPage,
+    setArr,
   } = useContext(Context);
   const focus = () => {
     setMax(false);
@@ -26,6 +27,7 @@ const Count = () => {
   const clickEnter = () => {
     if (valueCount === '' || valueCount == '0') return;
     if (Number(valueCount) <= 30) {
+      setArr([1, 2, 3, 4, 5]);
       setValueSearch('');
       setPage(0);
       setCountPages(Math.round(1000 / valueCount));

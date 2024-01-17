@@ -45,6 +45,11 @@
       width: 25px;
       cursor: pointer;
     }
+    transition: 0.3s;
+    &:hover {
+      box-shadow: 2px 2px 2px rgb(64, 64, 64);
+      transform: scale(1.05);
+    }
   }
   .page {
     transition: 0.3s;
@@ -56,6 +61,11 @@
     justify-content: center;
     background-color: #f27d7d95;
     margin: 0 10px;
+    transition: 0.3s;
+    &:hover {
+      box-shadow: 2px 2px 2px gray;
+      transform: scale(1.1);
+    }
   }
   .active {
     transition: 0.3s;
@@ -68,5 +78,8 @@
     background-color: #f27d7d95;
     margin: 0 10px;
     animation: active 0.3s ease-in-out;
+  }
+  .next {
+    transform: rotate(180deg);
   }
 }
