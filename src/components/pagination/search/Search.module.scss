@@ -1,0 +1,39 @@
+.search {
+  margin-left: 30px;
+  @media (max-width: 700px) {
+    margin: 0;
+  }
+  .input {
+    position: relative;
+    margin-top: 5px;
+    button {
+      margin-left: 10px;
+      cursor: pointer;
+      width: 70px;
+      background-color: #f27d7d95;
+      border-radius: 3px;
+      border: none;
+      color: #535353;
+    }
+    display: flex;
+    input {
+      padding: 5px 25px 5px 5px;
+      &:focus {
+        outline: none;
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+    img {
+      position: absolute;
+      top: 8px;
+      left: 195px;
+      margin-right: 4px;
+      filter: brightness(0) saturate(100%) invert(30%) sepia(98%)
+        saturate(5536%) hue-rotate(350deg) brightness(91%) contrast(93%);
+      width: 20px;
+      cursor: pointer;
+    }
+  }
+}

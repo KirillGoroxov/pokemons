@@ -1,0 +1,28 @@
+.pokemon {
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+  background-color: #f27d7d45;
+  font-size: 18px;
+  b {
+    display: inline-block;
+    width: 70px;
+  }
+  img {
+    width: 170px;
+    display: block;
+    margin: 0 auto;
+  }
+  ul {
+    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+    li {
+      display: flex;
+      margin: 5px 0;
+    }
+  }
+  .types {
+    display: flex;
+  }
+}

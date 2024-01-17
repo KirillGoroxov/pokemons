@@ -1,0 +1,11 @@
+.header {
+  width: 100vw;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  border-bottom: 2px solid rgb(236, 122, 122);
+  @media (max-width: 700px) {
+    justify-content: center;
+  }
+}

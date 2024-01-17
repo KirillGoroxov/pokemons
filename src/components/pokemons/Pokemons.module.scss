@@ -1,0 +1,10 @@
+.pokemons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-left: 70px;
+  @media (max-width: 1000px) {
+    margin: 0;
+    justify-content: center;
+  }
+}
