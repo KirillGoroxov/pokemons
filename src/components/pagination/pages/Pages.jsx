@@ -36,7 +36,7 @@ const Pages = () => {
 
   const next = (e) => {
     setIsDisabled(true);
-    setTimeout(() => setIsDisabled(false), 1500);
+    setTimeout(() => setIsDisabled(false), 1000);
     if (page + 1 < countPages) {
       const id = e.target.id.split('-')[1];
       changePage(id);
