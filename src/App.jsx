@@ -7,7 +7,7 @@ import Pokemons from './components/pokemons/Pokemons';
 import Pagination from './components/pagination/Pagination';
 
 function App() {
-  const { isLoading, data } = useGetAllPokemonsQuery();
+  const { data } = useGetAllPokemonsQuery();
   useEffect(() => {
     data && setSlicePokemon(data.results.slice(0, 10));
   }, [data]);

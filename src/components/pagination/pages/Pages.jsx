@@ -11,12 +11,13 @@ const Pages = () => {
     countPages,
     page,
     setPage,
-    setValueCount,
     setValueSearch,
   } = useContext(Context);
+
   const [basePages, setBasePages] = useState();
   const [lastPage, setLastPage] = useState(false);
   const [firstPage, setFirstPage] = useState(false);
+  const [isDisabled, setIsDisabled] = useState(false);
 
   useEffect(() => {
     const pages = [...document.getElementsByName('page')];
@@ -27,11 +28,15 @@ const Pages = () => {
     setLastPage(page === Number(pages[4].id.split('-')[1]));
     setFirstPage(page === Number(pages[0].id.split('-')[1]));
   }, [page]);
+
   const clickPage = (e) => {
     const id = e.target.id.split('-')[1];
     changePage(Number(id));
   };
+
   const next = (e) => {
+    setIsDisabled(true);
+    setTimeout(() => setIsDisabled(false), 1500);
     if (page + 1 < countPages) {
       const id = e.target.id.split('-')[1];
       changePage(id);
@@ -41,6 +46,7 @@ const Pages = () => {
       }
     }
   };
+
   const prev = (e) => {
     if (page !== 0) {
       const id = e.target.id.split('-')[1];
@@ -51,6 +57,7 @@ const Pages = () => {
       }
     }
   };
+
   const changePage = (id) => {
     setValueSearch('');
     let num = 0;
@@ -91,14 +98,20 @@ const Pages = () => {
           );
         })}
       </div>
-      <div className={styles.arrow} id="div-next" onClick={(e) => next(e)}>
+      <button
+        disabled={isDisabled}
+        className={styles.arrow}
+        style={{ opacity: isDisabled && 0.5 }}
+        id="div-next"
+        onClick={(e) => next(e)}
+      >
         <img
           src="/icons/arrow.svg"
           alt="next"
           id="img-next"
           className={styles.next}
         />
-      </div>
+      </button>
     </div>
   );
 };
